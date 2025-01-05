@@ -1,0 +1,153 @@
+.cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.card-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas en móviles */
+    height: auto; 
+    min-height: 100vh;
+    background-color: #4103d100; 
+    padding: 20px; /* Espacio para evitar que los elementos choquen con el borde */
+}
+
+.card-container .card {
+    border: 3px solid #000000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(90, 86, 86);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    max-width: 250px;
+    background-color: #0D47A1;
+    flex: 1 1 calc(100% - 20px); /* Toma el ancho completo en móviles */
+}
+
+.card-container .card .card-img {
+    width: 100%;
+    border-radius: 20px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.card-container .card .card-title {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #868585;
+}
+
+.card-container .card .card-text {
+    font-family: Arial, sans-serif;
+    color: hsl(0, 0%, 100%);
+    li{
+        list-style-type:none;
+        text-align:start;
+    }
+    li::before{
+        content: "- ";
+    }
+}
+
+.HContainer {
+    background-image: url("./assets/backgroundMyWebsite.jpg");
+    background-position: center;
+    background-size: contain; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    padding: 20px;
+}
+
+.HContainer .Heading {
+    color: #2f00ff;
+    font-size: clamp(18px, 5vw, 36px); /* Escala el texto responsivamente */
+    margin: 10px 0;
+}
+
+.HContainer .Navegator {
+    color: #2f00ff;
+    width: 100%;
+    font-size: 100%;
+    padding: 10px 0;
+}
+
+.HContainer .Navegator .Card-Index {
+    flex-wrap: wrap; /* Asegura que los elementos se ajusten en varias filas */
+    padding: 0;
+    margin: 0;
+    list-style-type:disc;
+    display: flex;
+    justify-content: center; 
+    font-size: 22px;
+    li{
+        margin-inline: 100px;
+        margin-top: 40px;
+    }
+    
+}
+
+
+.foot {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #ffffff;
+    display: flex;
+    justify-content: end;
+    text-align: end;
+    list-style-type: none;
+    padding-left: 20px;
+    background-color: #0D47A1;
+    li::after{
+        content: "-";
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) { /* Pantallas de tabletas y móviles grandes */
+    .card-container {
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    .card-container .card {
+        flex: 1 1 calc(45% - 20px); /* Ajusta el tamaño al 45% del contenedor */
+    }
+
+    .HContainer .Navegator .Card-Index li {
+        margin: 100px;
+    }
+}
+
+@media (max-width: 480px) { /* Pantallas de móviles pequeños */
+    .card-container .card {
+        flex: 1 1 calc(100% - 20px); /* Toma el ancho completo */
+    }
+
+    .HContainer .Heading {
+        font-size: 30px;
+    }
+
+    .HContainer .Navegator .Card-Index {
+        display: grid; /* Cambiamos a Grid */
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+        justify-items: center;
+        margin-top: 40px;
+    }
+
+    .HContainer .Navegator .Card-Index li {
+        margin: 5px; /* Espaciado vertical */
+    }
+}
