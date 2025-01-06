@@ -134,20 +134,33 @@
 
 
 /* Media Queries para Responsividad */
+/* Media Queries para Responsividad */
 @media (max-width: 768px) { /* Pantallas de tabletas y móviles grandes */
     .card-container {
         justify-content: space-around;
-        padding: 10px;
+        padding: 15px; /* Ajusta el padding si es necesario */
     }
 
     .card-container .card {
-        flex: 1 1 calc(45% - 20px); /* Ajusta el tamaño al 45% del contenedor */
+        flex: 1 1 calc(48% - 20px); /* Ajusta el tamaño al 48% del contenedor */
+    }
+
+    .HContainer .Heading {
+        font-size: 32px; /* Ajusta el tamaño del texto para que sea más legible */
+    }
+
+    .HContainer .Navegator .Card-Index {
+        display: grid; /* Cambiamos a Grid */
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+        justify-items: center;
+        margin-top: 30px; /* Ajusta el margen superior */
     }
 
     .HContainer .Navegator .Card-Index li {
-        margin: 100px;
+        margin: 10px; /* Espaciado vertical */
     }
 }
+
 
 @media (max-width: 480px) { /* Pantallas de móviles pequeños */
     .card-container .card {
