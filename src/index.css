@@ -54,6 +54,14 @@
     li::before{
         content: "- ";
     }
+    a {
+        text-decoration-color: transparent ;
+        transition: color 0.3s ease, transform 0.3s ease; /* Añade una transición suave */
+    }
+    p:hover {
+        color: #3498db; 
+        transform: scale(1.02); 
+    }
 }
 
 .HContainer {

@@ -24,7 +24,8 @@ function CardsData() {
             id: "proyectos",
             image: proyectsPic,
             title: "Python, Java, JS-React",
-            description: "URL of the portfolio on GitHub.",
+            description: "Welcome to my github!",
+            link: "https://github.com/Senai042"
         },
         {
             id: "contactos",
@@ -32,7 +33,7 @@ function CardsData() {
             title: "Contact Information",
             gmail:'isai.0210@gmail.com',
             Cellphone:'+506 63773035',
-            Instagram: 'is_ai_042',
+            Instagram: 'Ig: is_ai_042',
         },
     ];
 }
